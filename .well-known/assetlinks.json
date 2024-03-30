@@ -1,0 +1,9 @@
+[
+  {
+    "relation": "delegate_permission/android-app",
+    "target": {
+      "namespace": "android:apk:packageName",
+      "package_name": "com.memefy"
+    }
+  }
+]
