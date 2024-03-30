@@ -3,13 +3,13 @@
 import { useRouter, useParams } from "next/navigation";
 import { useEffect } from "react";
 
-export default function User() {
+export default function Post() {
   const router = useRouter()
-  const {uid} = useParams();
+  const {pid} = useParams();
 
   useEffect(() => {
-    if (typeof uid === 'string') {
-      router.push('memefy://u/' + uid)
+    if (typeof pid === 'string') {
+      router.push('memefy://p/' + pid)
     }
   }, []);
   return (
@@ -21,10 +21,10 @@ export default function User() {
         You will be redirected to Memefy app shortly.
       </div>
       {
-        typeof uid === 'string' ?
+        typeof pid === 'string' ?
           <div>
             If it takes too long to happen, click
-            {' '}<a href={'memefy://u/' + uid} className="font-medium text-blue-500 underline underline-offset-2">here</a>
+            {' '}<a href={'memefy://u/' + pid} className="font-medium text-blue-500 underline underline-offset-2">here</a>
           </div>
           :
           null
